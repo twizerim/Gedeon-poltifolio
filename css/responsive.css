@@ -1,0 +1,35 @@
+@media(max-width:1071px){
+    .nav-link,.nav-links{
+        font-size: 1.5rem;
+    }
+    .links{
+        gap: 1rem;
+    }
+}
+@media(max-width:855px){
+    .links{
+        gap: 0rem;
+    }
+    .nav-link,.nav-links{
+        font-size: 1rem;
+    }
+}
+@media(max-width:643px){
+    .logo h1 span{
+        font-size: 1rem;
+    }
+    .logo h1{
+        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media(max-width:569px){
+    .nav-link,.nav-links{
+        display: none;
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+    }
+}
