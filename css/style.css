@@ -58,3 +58,68 @@ nav{
 .nav-links:hover{
     background-color: #FF00BF;
 }
+
+.wellcome-page{
+    
+    padding: 3rem;
+}
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image img{
+    width: 250px;
+    border-radius: 50%;
+}
+.text{
+    background-color: #242323;
+    width: 50rem;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 1rem;
+   
+}
+.text h1{
+    color: #af1288;
+}
+.text h1,.text p{
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+.text span{
+    font-size: 2rem;
+}
+.text span,.text p{
+    color: #fff;
+}
+.btn{
+    padding: 2rem 0rem;
+}
+.btn button{
+    padding: 3px 5px;
+    font-size: 1.4rem;
+    background-color: #af1288;
+    border-radius: 4px;
+}
+.btn button:hover{
+    background-color: #FF00BF;
+    color: #fff;
+}
+
+.icon{
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.one{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;  
+}
+.one a img{
+    width: 50px;
+}
