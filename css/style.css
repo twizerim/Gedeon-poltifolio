@@ -123,3 +123,56 @@ nav{
 .one a img{
     width: 50px;
 }
+.hid-content{
+    display: none;
+    padding: 2rem;
+    font-size:1.5rem;
+}
+
+.about-container{
+    background-color: #ddd;
+    padding: 3rem;
+}
+.header h2{
+    text-align: center;
+    font-size: 3rem;
+    padding: 2rem 0rem;
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around
+}
+.about{
+    width: 40%;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+.imagee img{
+    width: 300px;
+    border-radius: 1.5rem;
+   
+}
+.about p{
+    font-size: 1.5rem;
+    padding: 2rem;
+    font-weight: 500;
+}
+.buton-contain{
+    padding: 0rem 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.buton-contain button{
+     background-color: #af1288;
+     color: #fff;
+     font-size: 1.5rem;
+     font-weight: 900;
+     padding: 1rem 2rem;
+     border-radius: 1rem;
+}
+.buton-contain button:hover{
+    background-color: #FF00BF;
+}
