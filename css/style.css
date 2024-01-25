@@ -58,10 +58,15 @@ nav{
 .nav-links:hover{
     background-color: #FF00BF;
 }
+.menu img{
+    width: 50px;
+    display: none;
+}
 
 .wellcome-page{
     
     padding: 3rem;
+    height: 83VH;
 }
 .home{
     display: flex;
@@ -127,11 +132,45 @@ nav{
     display: none;
     padding: 2rem;
     font-size:1.5rem;
+} 
+/* ------------------------------------------------------------------------------------------------ */
+.header{
+    display: flex;
+    justify-content: center;
+}
+.heading-title{
+    font-size: 4.8rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    padding: 1rem;
+    display: inline-block;
+    position: relative;
+}
+.heading-title::before{
+    content: " ";
+    bottom: 0%;
+    left: 0%;
+    height: 5px;
+    width: 25%;
+    background-color: rgb(174, 13, 206);
+    position: absolute;
+    font-size: 1.2rem;
+}
+.heading-title::after{
+    content: " ";
+  top: 0%;
+  right: 0%;
+  height: 5px;
+  width: 60%;
+  background-color: rgba(231, 20, 221, 0.897);
+  position: absolute;
+  font-size: 1.2rem;
 }
 
 .about-container{
     background-color: #ddd;
     padding: 3rem;
+    height: 100VH;
 }
 .header h2{
     text-align: center;
@@ -176,3 +215,154 @@ nav{
 .buton-contain button:hover{
     background-color: #FF00BF;
 }
+/* ---------------------------------------------------------- */
+.poltifolio-container{
+    height: 100vh;
+    background-image: url("./Images/1.png");
+    padding: 2rem;
+}
+.poltifolio{
+    background-color: #ddd;
+    width: 80%;
+    padding: 2rem;
+    height: 97vh;
+}
+.computer{
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem 0rem;
+
+}
+.loptop{
+    width: 30%;
+    background-color: #FF00BF;
+    height: 50vh;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+.loptop img{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.lop-top{
+    border-radius: 12px;
+      transition: all 10s;
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow-y: hidden;
+      width: 100%;
+      height: 100%;
+}
+.loptop-text{
+    display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+      display: none;
+      overflow: hidden;
+    
+      align-items: center;
+      border-radius: 12px;
+      padding: 3rem;
+      transition: all 0.8s;
+      animation-name: scroll;
+      animation-duration: 1s;
+      backdrop-filter: blur;
+      justify-content: center;
+      background-color: #FF00BF;
+}
+.lop-top:hover .loptop-text {
+    display: flex;
+  }
+@keyframes scroll {
+    0% {
+      transform: translateY(80%);
+    }
+    100% {
+        transform: translateY(0%);
+      }
+}
+.loptop-text h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+  }
+  .loptop-text p {
+    font-size: 1.5rem;
+    color: #0804e7;
+  }
+.lop-icon {
+background-color: #eee;
+display: block;
+margin-top: 1.5rem;
+padding: 1.5rem;
+border-radius: 50%;
+}
+.lop-icon img{
+    width: 40px;
+}
+/* ----------------------------------------------------------------------------------------- */
+ .sikills-container{
+    height: 100vh;
+    background-image: url("./Images/home\ 4.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    object-fit: cover;
+    /* background-attachment: fixed; */
+    padding: 5rem 3rem;
+ }
+ .triangle{
+    padding: 2rem 2rem;
+ }
+ .oners{
+    display: flex;
+    justify-content: center;
+ }
+ .duoble{
+    display: flex;
+    justify-content: center;
+    /* gap: 1rem; */
+    padding: 0.6rem;
+ }
+ h5{
+    font-size: 3rem;
+    background-color: #FF00BF;
+    color: #fff;
+    border-radius: 1rem;
+    padding: 0.5rem 3rem;
+ }
+
+ .cards-container{
+    display: flex;
+    justify-content: space-around;
+ }
+ .cards{
+    background-color: #86b6c9;
+    padding: 2rem;
+    width: 30%;
+    border-radius: 1rem;
+    transition: all 3s;
+    cursor: pointer;
+ }
+ .cards h3{
+    padding: 2rem 0rem;
+    font-size: 2rem;
+    color: #af1288;
+ }
+ .cards p{
+    padding-bottom: 2rem;
+    font-size: 1.5rem;
+ }
+ .cards span a{
+    font-size: 1.4rem;
+    text-decoration: none;
+ }
+ .cards:hover{
+    transform: translate(-4px,4px);
+    background-color: #FF00BF;
+ }
+

@@ -22,6 +22,20 @@
     }
 }
 @media(max-width:643px){
+    .computer{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+    }
+    .loptop{
+        width: 100%;
+    }
+    .poltifolio-container{
+        height: auto;
+    }
+    .poltifolio{
+        height: auto;
+    }
     .content{
         display: flex;
         flex-direction: column;
@@ -42,10 +56,39 @@
         display: flex;
         flex-direction: column;
     }
+    .about-container{
+        height: auto;
+   }
+   .cards-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1.5rem;
+   }
+   .cards{
+    width: 100%;
+   }
+   .sikills-container{
+     height: auto;
+   }
 }
 @media(max-width:569px){
+    .computer{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 2rem;
+    }
+    .loptop{
+        width: 100%;
+    }
+   
+    .wellcome-page{
+        height: auto;
+    }
     .nav-link,.nav-links{
         display: none;
+    }
+    .menu img{
+        display: block;
     }
     nav{
         display: flex;
@@ -70,3 +113,24 @@
      width: 100%;
    }
 }
+@media(max-width:509px){
+    .cards-container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 1.5rem;
+       }
+      
+       h5{
+        font-size: 2rem;
+        border-radius: 0.5rem;
+        padding: 0.2rem 2rem;
+     }
+}
+@media(max-width:327px){
+    h5{
+        font-size: 1.5rem;
+        border-radius: 0.5rem;
+        padding: 0.2rem 1rem;
+     }
+}
+
