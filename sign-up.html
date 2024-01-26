@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+      <style>
+    body {
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      margin: 0;
+      background-image: url("css/Images/3.png");
+    }
+
+    .login-container {
+      background-color: #5f5d5d;
+      width: 30%;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-top: 4rem;
+      
+    }
+    .login-container h2{
+        font-size: 2.3rem;
+        padding: 2rem;
+    }
+
+    .login-container label {
+      display: block;
+      margin-bottom: 8px;
+      text-align: left;
+      font-size: 1.6rem;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .login-container input[type="submit"] {
+      background-color: #b4148c;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .login-container input[type="submit"]:hover {
+      background-color:#FF00BF ;
+    }
+    
+    
+    @media(max-width:949px){
+        .login-container{
+            width: 50%;
+        }
+    }
+    
+    @media(max-width:741px){
+        .login-container{
+            width: 60%;
+        }
+    }
+    @media(max-width:571px){
+        .login-container{
+            width: 70%;
+        }
+        .forgot{
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 1rem;
+        }
+    }
+
+         
+      </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+             <h1>T<span>W <a href="#">Gedeon</a></span></h1>
+        </div>
+        <ul class="links">
+            <li><a href="./index.html" class="nav-link">Home</a></li>
+            <li><a href="./index.html#about" class="nav-link">About-Me</a></li>
+            <li><a href="./index.html#poltifo" class="nav-link">Poltifolio</a></li>
+            <li><a href="./index.html#skill" class="nav-link">Skills</a></li>
+            <li><a href="#" class="nav-link">Blogs</a></li>
+            <li><a href="#" class="nav-link">Contact-Me</a></li>
+            <li><a href="#" class="nav-links">Login</a></li>
+            <div class="menu">
+                <img src="./css/Images/menu.png" alt="yego">
+            </div>
+        </ul>
+        
+     </nav>
+
+     <center>
+        <div class="login-container">
+            <h2>Registration form / Sign-up</h2>
+            <form action="#" method="post">
+              <label for="names">
+              <input type="names" id="names" name="names" required placeholder="Enter your first name">
+            </label>
+          
+              <label for="lastname">
+              <input type="lastname" id="lastname" name="lastname" required placeholder="Enter your last name">
+            </label>
+
+              <label for="email">
+              <input type="email" id="email" name="email" required placeholder="Enter your email">
+            </label>
+
+              <label for="phone">
+              <input type="number" id="phone" name="phone" required placeholder="Enter your phone numer">
+            </label>
+
+              <label for="password">
+              <input type="password" id="password" name="password" required placeholder="Enter your password">
+            </label>
+
+              <label for="confrimpassword">
+              <input type="confrimpassword" id="confrimpassword" name="confrimpassword" required placeholder="enter your confrim password">
+            </label>
+          
+          
+              <input type="submit" value="Sign Up">
+            </form>
+          </div>
+     </center>
+</body>
+</html>

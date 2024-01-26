@@ -14,16 +14,17 @@ nav{
     border-bottom: 3px solid black;
     padding: 2rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+     top: 0;
+    z-index: 9999;
+     position: -webkit-sticky; 
+    position: sticky;
+    scroll-behavior: smooth; 
 }
 .logo{
     display: flex;
-    align-items: end;
-}
-.logo img{
-    width: 50px;
-    border-radius: 50%;
+    align-items: center;
 }
 .logo h1{
     font-size: 3rem;
@@ -66,12 +67,13 @@ nav{
 .wellcome-page{
     
     padding: 3rem;
-    height: 83VH;
+    height: 88vh;
 }
 .home{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 5rem;
 }
 
 .image img{
@@ -122,17 +124,39 @@ nav{
 }
 .one{
     display: flex;
-    justify-content: center;
+    justify-content: left;
     gap: 2rem;  
+   
+}
+marquee{
+    background-color: #e450bf;
+    padding: 2rem;
+    font-size: 2rem;
+    bottom: 0;
+    position: absolute;
 }
 .one a img{
-    width: 50px;
+    width: 20px;
 }
 .hid-content{
     display: none;
     padding: 2rem;
     font-size:1.5rem;
 } 
+.welcom-word h2{
+        position: absolute;
+        animation: moveAndRotate 4s linear infinite;
+        font-size: 3rem;
+        color: #af1288;
+}
+@keyframes moveAndRotate {
+    0% {
+      transform: translateX(0) rotate(0deg);
+    }
+    100% {
+      transform: translateX(100%) rotate(100deg);
+    }
+  }
 /* ------------------------------------------------------------------------------------------------ */
 .header{
     display: flex;
@@ -170,7 +194,7 @@ nav{
 .about-container{
     background-color: #ddd;
     padding: 3rem;
-    height: 100VH;
+    height: 110vh;
 }
 .header h2{
     text-align: center;
@@ -217,26 +241,43 @@ nav{
 }
 /* ---------------------------------------------------------- */
 .poltifolio-container{
-    height: 100vh;
-    background-image: url("./Images/1.png");
+    height: auto;
+   background-color: #363535;
     padding: 2rem;
 }
-.poltifolio{
-    background-color: #ddd;
-    width: 80%;
+.destination{
+    padding-top: 3rem;
+}
+.destination img{
+     width: 150px;
+     border-radius: 50%;
+     border: 3px solid #FF00BF;
+}
+.destination p{
+    font-size: 1.5rem;
+    color: #fff;
+}
+.destination p a{
+    color: #af1288;
+}
+.destination h6{
+    font-size: 2.3rem;
+    color: aliceblue;
     padding: 2rem;
-    height: 97vh;
+}
+.destination h6 span{
+    font-weight: bold;
 }
 .computer{
     display: flex;
-    justify-content: space-around;
-    padding: 3rem 0rem;
+    justify-content: space-around; 
+     padding: 2rem 0rem; 
 
 }
 .loptop{
     width: 30%;
     background-color: #FF00BF;
-    height: 50vh;
+    height: 40vh;
     position: relative;
     overflow: hidden;
     border-radius: 1rem;
@@ -306,7 +347,7 @@ border-radius: 50%;
 }
 /* ----------------------------------------------------------------------------------------- */
  .sikills-container{
-    height: 100vh;
+    height: 110vh;
     background-image: url("./Images/home\ 4.png");
     background-repeat: no-repeat;
     background-position: center center;
@@ -365,4 +406,59 @@ border-radius: 50%;
     transform: translate(-4px,4px);
     background-color: #FF00BF;
  }
+ /* ------------------------------------------------------------------------------------------- */
+
+ .Blogs-page{
+    background-color: #272626;
+    height: 100vh;
+    padding: 3rem 2rem;
+ }
+ .active{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem 1rem;
+ }
+
+ .color-change-button {
+    padding: 1rem 3rem;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #FF00BF;
+    border-radius: 1rem; 
+  }
+
+  .color-change-button:hover {
+    background-color: #ad308e; 
+  }
+
+  .clicked {
+    background-color: #d400ff !important; 
+  }
+  .lorger{
+    background-image: url("./Images/Screenshot_20230714-083356_1.png");
+    object-fit: cover;
+    background-position: center center;
+    background-size: cover;
+    width: 30%;
+    margin-top: 3rem;
+    height: 250px;
+  }
+  .lorger a{
+     position: absolute;
+     z-index: 9999;
+     background-color: #af1288;
+
+  }
+  .lorger .imagess{
+    width: 50%;
+    height: 250px;
+    padding: 2rem 0rem;
+  }
+  .lorger .imagess img{
+     width: 100%;
+     height: 100%;
+  }
+
 

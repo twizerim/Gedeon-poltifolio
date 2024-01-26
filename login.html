@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+      <style>
+         body {
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    .login-container {
+      background-color: #5f5d5d;
+      width: 30%;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-top: 4rem;
+      
+    }
+    .login-container h2{
+        font-size: 2.3rem;
+        padding: 2rem;
+    }
+
+    .login-container label {
+      display: block;
+      margin-bottom: 8px;
+      text-align: left;
+      font-size: 1.6rem;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .login-container input[type="submit"] {
+      background-color: #b4148c;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .login-container input[type="submit"]:hover {
+      background-color:#FF00BF ;
+    }
+
+    .remember-me-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .forgot {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+     
+    }
+    .forgot p{
+        font-size: 14px;
+      color: #555;
+    }
+    .forgot button{
+        padding: 0.4rem 2rem;
+        border-radius: 0.5rem;
+        background-color: #FF00BF;
+    }
+    .part{
+        padding-top: 2rem;
+    }
+    .part p{
+        font-size: 1.5rem;
+    }
+    .part p a{
+        padding: 0.4rem;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 0.5rem;
+    }
+    .part p a:hover{
+        background-color: #FF00BF;
+    }
+    @media(max-width:949px){
+        .login-container{
+            width: 50%;
+        }
+    }
+    
+    @media(max-width:741px){
+        .login-container{
+            width: 60%;
+        }
+    }
+    @media(max-width:571px){
+        .login-container{
+            width: 70%;
+        }
+        .forgot{
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 1rem;
+        }
+    }
+
+         
+      </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+             <h1>T<span>W <a href="#">Gedeon</a></span></h1>
+        </div>
+        <ul class="links">
+            <li><a href="./index.html" class="nav-link">Home</a></li>
+            <li><a href="./index.html#about" class="nav-link">About-Me</a></li>
+            <li><a href="./index.html#poltifo" class="nav-link">Poltifolio</a></li>
+            <li><a href="./index.html#skill" class="nav-link">Skills</a></li>
+            <li><a href="#" class="nav-link">Blogs</a></li>
+            <li><a href="#" class="nav-link">Contact-Me</a></li>
+            <li><a href="#" class="nav-links">Login</a></li>
+            <div class="menu">
+                <img src="./css/Images/menu.png" alt="yego">
+            </div>
+        </ul>
+        
+     </nav>
+
+     <center>
+        <div class="login-container">
+            <h2>Login Form</h2>
+            <form action="#" method="post">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+          
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" required>
+          
+              <div class="remember-me-container">
+                <input type="checkbox" id="rememberMe" name="rememberMe">
+                <label for="rememberMe">Remember me!!</label>
+              </div>
+          
+              <input type="submit" value="Login">
+              <div class="forgot">
+                <button>Cancel</button>
+                <p class="forgot-password"><a href="#">Forgot Password?</a></p>
+              </div>
+            </form>
+            <div class="part">
+                <p>If you don't have any account please  <a href="./sign-up.html">Sign-up</a></p>
+            </div>
+          </div>
+     </center>
+</body>
+</html>

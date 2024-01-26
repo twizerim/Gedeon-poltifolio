@@ -1,7 +1,7 @@
 
-function hiderword(){
-    const showers= document.querySelector(".hid-content").style.display="block"
-}
+// function hiderword(){
+//     const showers= document.querySelector(".hid-content").style.display="block"
+// }
 
 function downloadPDF() {
     // Replace 'path/to/your/file.pdf' with the actual path to your PDF file
@@ -23,3 +23,7 @@ function downloadPDF() {
     // Remove the link element from the document
     document.body.removeChild(link);
 }
+
+document.getElementById('colorButton').addEventListener('click', function() {
+    this.classList.toggle('clicked');
+})
