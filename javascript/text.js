@@ -27,3 +27,13 @@ function downloadPDF() {
 document.getElementById('colorButton').addEventListener('click', function() {
     this.classList.toggle('clicked');
 })
+
+function navad(){
+    const admin=document.querySelector(".navigate").style.display="none"
+    const wapi =document.querySelector(".fa-bars").style.display="block"
+}
+
+function naver(){
+    const byaje=document.querySelector(".navigate").style.display="block"
+    const wapi =document.querySelector(".fa-bars").style.display="none"
+}

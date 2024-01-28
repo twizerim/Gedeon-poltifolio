@@ -410,55 +410,157 @@ border-radius: 50%;
 
  .Blogs-page{
     background-color: #272626;
-    height: 100vh;
+    height: auto;
     padding: 3rem 2rem;
  }
- .active{
+ .link-blogs{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+ }
+ .two{
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+ }
+ .picture img{
+    width: 100%;
+    height: 100%;
+ }
+ li a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #fff;
+ }
+ li a:hover{
+    color: #FF00BF;
+ }
+ .card-blogs{
+    padding: 3rem;
+ }
+.carder{
+    display: flex;
+    background-color: #ddd;
+    margin: 1.4rem 0rem;
+}
+.decription{
+    padding: 2rem;
+    width: 80%;
+}
+h2{
+    font-size: 2.3rem;
+    color: #000;
+}
+h3{
+    font-size: 1.9rem;
+    padding: 1.6rem 0rem;
+}
+p{
+    font-size: 1.4rem;
+    padding-bottom: 1.6rem;
+}
+span a{
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+.favolite{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 1rem 0rem;
+}
+.favolite li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+i{
+    font-size: 1.5rem;
+}
+/* ---------------------------------------------------------------------------------- */
+.contact-contain{
+    background-color: #ddd;
+    padding: 3rem 2rem;
+} 
+.contact{
+    /* background-color: #af1288; */
+    padding: 2rem;
+}
+.def-card{
     display: flex;
     justify-content: center;
     gap: 2rem;
-    padding: 3rem 1rem;
- }
-
- .color-change-button {
-    padding: 1rem 3rem;
+   
+}
+.contact-left{
+    background-color: #555353;
+    padding: 2rem;
+    width: 35%;
+}
+.rigth{
+    background-color: #1b1a1ae8;
+    display: flex;
+    align-items: center;
+    width: 45%;
+}
+.letter{
+    padding: 2rem;
+    background-color: #af1288;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.letter p{
+    text-align: center;
+    padding-top: 1rem;
+}
+.letter img{
+    width: 100px;
+}
+form{
+    width: 100%;
+    padding: 2rem;
+    height: 100%;
+}
+form label input{
+    width: 100%;
+}
+form label{
+    font-size: 1.4rem;
+    color: #eee;
+    padding-bottom: 2rem;
+}
+.padd{
+    padding-bottom: 2rem;
+}
+textarea{
+    width: 100%;
+}
+.media-icons{
+    display: flex;
+    gap: 0.4rem;
+}
+.social-media-icons-links{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.social-media-icons-links i{
     font-size: 2rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    background-color: #FF00BF;
-    border-radius: 1rem; 
-  }
+}
 
-  .color-change-button:hover {
-    background-color: #ad308e; 
-  }
+button{
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 100%;
+}
+button:hover{
+    background-color: #af1288;
+    color: #eee;
+}
 
-  .clicked {
-    background-color: #d400ff !important; 
-  }
-  .lorger{
-    background-image: url("./Images/Screenshot_20230714-083356_1.png");
-    object-fit: cover;
-    background-position: center center;
-    background-size: cover;
-    width: 30%;
-    margin-top: 3rem;
-    height: 250px;
-  }
-  .lorger a{
-     position: absolute;
-     z-index: 9999;
-     background-color: #af1288;
-
-  }
-  .lorger .imagess{
-    width: 50%;
-    height: 250px;
-    padding: 2rem 0rem;
-  }
-  .lorger .imagess img{
-     width: 100%;
-     height: 100%;
-  }
-
-
+  

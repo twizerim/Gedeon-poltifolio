@@ -5,6 +5,9 @@
     .links{
         gap: 1rem;
     }
+    .sikills-container{
+        height: auto;
+    }
 }
 @media(max-width:855px){
 
@@ -19,6 +22,18 @@
     }
     .nav-link,.nav-links{
         font-size: 1rem;
+    }
+    .def-card{
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+    }
+    .contact-left{
+        width: 60%;
+    }
+    .rigth{
+        width: 60%;
     }
 }
 @media(max-width:643px){
@@ -70,6 +85,20 @@
    .sikills-container{
      height: auto;
    }
+   .carder{
+      display: flex;
+      flex-direction: column;
+
+   }
+   .Blogs-page{
+    height: auto;
+   }
+   .contact-left{
+    width: 100%;
+}
+.rigth{
+    width: 100%;
+}
 }
 @media(max-width:569px){
     .computer{
@@ -125,6 +154,11 @@
         border-radius: 0.5rem;
         padding: 0.2rem 2rem;
      }
+}
+@media(max-width:449px){
+    .letter img{
+        width: 50px;
+    }
 }
 @media(max-width:327px){
     h5{
