@@ -35,7 +35,7 @@ signupForm.addEventListener("submit",function(e){
      users.push(person)
      const user=users.find(function(user){
            if(user.email===email){
-                alert("user aready exist")
+                alert("please fill you form cellectly")
            }else{
                localStorage.setItem("users",JSON.stringify(users));
                alert("user success fuly created")
