@@ -9,15 +9,43 @@
 <body>
      <div class="blog-contant">
         <div class="blog-nav">
-            <li class="a">Post blog</li>
-            <li class="a">Update bloge</li>
-            <li class="a">Delete all</li>
-            <li class="a">Delete one</li>
+            <li class="a" onclick="post()">Post blog</li>
+            <li class="a" onclick="update()">Update bloge</li>
+            <li class="a" onclick="Delete()">Delete one</li>
             <li class="a"><a href="./index.html#blogs" style="color: aliceblue;text-decoration: none;">Get all</a></li>
         </div>
         <div class="post-blog">
-            <form action="">
+            <form action="" id="blogForm">
                 <h1>Posting new blog</h1>
+                <div class="bb">
+                    <label for="title">
+                        <input type="text" name="title" id="title" placeholder="Enter bloge title">
+                    </label>
+                </div>
+               <div class="bb">
+                <label for="name">
+                    <input type="text" name="name" id="name" placeholder="Enter bloge name">
+                </label>
+               </div>
+               <div class="bb">
+                <label for="image">
+                    <input type="file" name="image" id="image" placeholder="Upload Image">
+                </label>
+               </div>
+                <div class="bb">
+                    <label for="discription">
+                        <input type="text" name="discription" id="decription" placeholder="Enter bloge discription">
+                    </label>
+                </div>
+
+                <div class="buttonn">
+                    <button type="submit" onclick="postBlog()">post blog</button>
+                </div>
+            </form>
+        </div>
+        <div class="update-blog">
+            <form action="">
+                <h1>Update blog</h1>
                 <div class="bb">
                     <label for="title">
                         <input type="text" name="title" placeholder="Enter bloge title">
@@ -40,10 +68,41 @@
                 </div>
 
                 <div class="buttonn">
-                    <button type="submit">post blog</button>
+                    <button type="submit">Update</button>
+                </div>
+            </form>
+        </div>
+        <div class="delete-blog">
+            <form action="" id="blogForm">
+                <h1>Delete one blog</h1>
+                <div class="bb">
+                    <label for="title">
+                        <input type="text" name="title" placeholder="Enter bloge title">
+                    </label>
+                </div>
+               <div class="bb">
+                <label for="name">
+                    <input type="text" name="name" placeholder="Enter bloge name">
+                </label>
+               </div>
+               <div class="bb">
+                <label for="image">
+                    <input type="file" name="image" placeholder="Upload Image">
+                </label>
+               </div>
+                <div class="bb">
+                    <label for="discription">
+                        <input type="text" name="discription" placeholder="Enter bloge discription">
+                    </label>
+                </div>
+
+                <div class="buttonn">
+                    <button type="submit">Delete blog</button>
                 </div>
             </form>
         </div>
      </div>
+     <script src="./javascript/postblog.js"></script>
+     <script src="./javascript/text.js"></script>
 </body>
 </html>

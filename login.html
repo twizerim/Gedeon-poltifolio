@@ -44,13 +44,13 @@
       border-radius: 4px;
     }
 
-    .login-container input[type="submit"] {
+    .login-container input {
       background-color: #b4148c;
       color: #fff;
       cursor: pointer;
     }
 
-    .login-container input[type="submit"]:hover {
+    .login-container input:hover {
       background-color:#FF00BF ;
     }
 
@@ -65,16 +65,18 @@
         justify-content: space-between;
         align-items: center;
         padding: 2rem;
-     
+    }
+    .forgot .cancel{
+         background-color: #161515;
+         padding: 0.5rem 0.9rem;
+         font-size: 1.7rem;
+         text-decoration: none;
+         color: #ccc;
+         border-radius: 0.5rem;
     }
     .forgot p{
         font-size: 14px;
       color: #555;
-    }
-    .forgot button{
-        padding: 0.4rem 2rem;
-        border-radius: 0.5rem;
-        background-color: #FF00BF;
     }
     .part{
         padding-top: 2rem;
@@ -139,29 +141,24 @@
      <center>
         <div class="login-container">
             <h2>Login Form</h2>
-            <form action="#" method="post">
+            <form action="#" method="post" id="loginFom">
               <label for="email">Email:</label>
               <input type="email" id="email" name="email" required>
           
               <label for="password">Password:</label>
               <input type="password" id="password" name="password" required>
           
-              <div class="remember-me-container">
-                <input type="checkbox" id="rememberMe" name="rememberMe">
-                <label for="rememberMe">Remember me!!</label>
-              </div>
-          
-              <input type="submit" value="Login">
+              <input type="submit" value="Login" onclick="Login()">
               <div class="forgot">
-                <button>Cancel</button>
+                <a href="./index.html" class="cancel">Cancel</a>
                 <p class="forgot-password"><a href="#">Forgot Password?</a></p>
               </div>
             </form>
             <div class="part">
                 <p>If you don't have any account please  <a href="./sign-up.html">Sign-up</a></p>
-                <a href="./admin.html"> go to access</a>
             </div>
           </div>
      </center>
+     <script src="./javascript/login.js"></script>
 </body>
 </html>

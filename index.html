@@ -228,6 +228,9 @@
         <div class="header">
             <h2 class="heading-title">Blogs</h2> 
          </div>
+         <div class="login">
+           <h1></h1>
+         </div>
           <div class="link-blogs">
             <div class="two">
                 <li><a href="">All</a></li>
@@ -416,40 +419,41 @@
                         <img src="./css/Images/how.jpg" alt="yaje">
                         <p>Use this letter to contact me, my PBX:50/Ngarama</p>
                      </div>
-                        <form action="">
+                        <form action="" id="contact">
                             <h3>Fill in this form</h3>
                              <div class="padd">
                                 <label for="names">Enter your names
-                                    <input type="text" name="names">
+                                    <input type="text" name="names" id="names">
                                 </label>
                              </div>
 
                             <div class="padd">
                                 <label for="email">Enter your email
-                                    <input type="text" name="email">
+                                    <input type="text" name="email" id="email">
                                 </label>
                             </div>
 
                             <div class="padd">
                                 <label for="phone">Enter your phone number
-                                    <input type="text" name="phone">
+                                    <input type="text" name="phone" id="phone">
                                 </label>
                             </div>
 
                             <div class="padd">
                                 <label for="message">Enter your message
-                                    <textarea name="message" id="" cols="" rows="5"></textarea>
+                                    <textarea name="message" id="message" cols="" rows="5"></textarea>
                                 </label>
                             </div>
                             <div class="button">
-                                <button type="submit">Send your message</button>
+                                <button type="submit" onclick="Contactme()">Send your message</button>
                             </div>
+                             <p class="solution" style="color: green;font-size: 2rem;padding: 2rem; text-align: center;"></p>
                         </form>
                  </div>
               </div>
           </div>
       </div>
-
+     <script src="./javascript/contact.js"></script>
     <script src="./javascript/text.js"></script>
 </body>
 </html>

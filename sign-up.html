@@ -103,9 +103,9 @@
      <center>
         <div class="login-container">
             <h2>Registration form / Sign-up</h2>
-            <form action="#" method="post">
-              <label for="names">
-              <input type="names" id="names" name="names" required placeholder="Enter your first name">
+            <form action="#" method="post" id="signupForm">
+              <label for="firstname">
+              <input type="names" id="firstname" name="firstname" required placeholder="Enter your first name">
             </label>
           
               <label for="lastname">
@@ -129,9 +129,10 @@
             </label>
           
           
-              <input type="submit" value="Sign Up">
+              <input type="submit" onclick="Siginup()" value="Sign Up">
             </form>
           </div>
      </center>
+     <script src="./javascript/sign-up.js"></script>
 </body>
 </html>

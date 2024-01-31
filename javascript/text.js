@@ -1,7 +1,4 @@
 
-// function hiderword(){
-//     const showers= document.querySelector(".hid-content").style.display="block"
-// }
 
 function downloadPDF() {
     // Replace 'path/to/your/file.pdf' with the actual path to your PDF file
@@ -36,4 +33,30 @@ function navad(){
 function naver(){
     const byaje=document.querySelector(".navigate").style.display="block"
     const wapi =document.querySelector(".fa-bars").style.display="none"
+}
+
+// --------------------------------------------------------------------------------------------
+
+function post(){
+     const post=document.querySelector(".post-blog").style.display="block"
+     const update=document.querySelector(".update-blog").style.display="none"
+     const delet=document.querySelector(".delete-blog").style.display="none"
+}
+function update(){
+    const post=document.querySelector(".post-blog").style.display="none"
+    const update=document.querySelector(".update-blog").style.display="block"
+    const delet=document.querySelector(".delete-blog").style.display="none"
+
+}
+function Delete(){
+    const post=document.querySelector(".post-blog").style.display="none"
+    const update=document.querySelector(".update-blog").style.display="none"
+    const delet=document.querySelector(".delete-blog").style.display="block"
+
+}
+// ---------------------------------------------------------------------------------------------------
+
+
+function byajeto(){
+    const buto=document.querySelector(".user-update").style.display="block"
 }
