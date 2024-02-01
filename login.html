@@ -114,6 +114,9 @@
             gap: 1rem;
         }
     }
+    .error{
+      color: rgb(124, 14, 14);
+    }
 
          
       </style>
@@ -142,11 +145,15 @@
         <div class="login-container">
             <h2>Login Form</h2>
             <form action="#" method="post" id="loginFom">
-              <label for="email">Email:</label>
+              <label for="email">Email:
               <input type="email" id="email" name="email" required>
+              <span id="erroremail" class="error"></span>
+            </label>
           
-              <label for="password">Password:</label>
+              <label for="password">Password:
               <input type="password" id="password" name="password" required>
+               <span id="errorpassword" class="error"></span>
+            </label>
           
               <input type="submit" value="Login" onclick="Login()">
               <div class="forgot">

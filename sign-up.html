@@ -76,6 +76,9 @@
             gap: 1rem;
         }
     }
+    .error{
+      color: rgb(110, 9, 9);
+    }
 
          
       </style>
@@ -105,27 +108,33 @@
             <h2>Registration form / Sign-up</h2>
             <form action="#" method="post" id="signupForm">
               <label for="firstname">
-              <input type="names" id="firstname" name="firstname" required placeholder="Enter your first name">
+              <input type="names" id="firstname" name="firstname" placeholder="Enter your first name" required>
+              <span id="firstnameError" class="error"></span>
             </label>
           
               <label for="lastname">
-              <input type="lastname" id="lastname" name="lastname" required placeholder="Enter your last name">
+              <input type="lastname" id="lastname" name="lastname" placeholder="Enter your last name" required>
+              <span id="lastnameError" class="error"></span>
             </label>
 
               <label for="email">
-              <input type="email" id="email" name="email" required placeholder="Enter your email">
+              <input type="email" id="email" name="email" placeholder="Enter your email" required>
+              <span id="emailError" class="error"></span>
             </label>
 
               <label for="phone">
-              <input type="number" id="phone" name="phone" required placeholder="Enter your phone numer">
+              <input type="number" id="phone" name="phone" placeholder="Enter your phone numer" required>
+              <span id="phoneError" class="error"></span>
             </label>
 
               <label for="password">
-              <input type="password" id="password" name="password" required placeholder="Enter your password">
+              <input type="password" id="password" name="password" placeholder="Enter your password" required>
+              <span id="passwordError" class="error"></span>
             </label>
 
-              <label for="confrimpassword">
-              <input type="confrimpassword" id="confrimpassword" name="confrimpassword" required placeholder="enter your confrim password">
+              <label for="password">
+              <input type="password" id="confrimpassword" name="password" placeholder="enter your confrim password" required>
+              <span id="confrimError" class="error"></span>
             </label>
           
           

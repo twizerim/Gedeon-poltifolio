@@ -190,48 +190,6 @@ table {
   }
 
   /* ------------------------------------------------------------------------- */
-
-  .blog-contant{
-    background-color: rgb(56, 55, 55);
-    padding: 3rem 2rem;
-    height: 85vh;
-  }
-  .blog-nav{
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    align-items: center;
-    list-style: none;
-  }
-  .a{
-    color: #fff;
-    text-decoration: none;
-    border-bottom: 2px solid white;
-    padding-bottom: 0.4rem;
-  }
-  .post-blog,.update-blog,.delete-blog{
-     margin-top: 3rem;
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-     
-  }
-  .update-blog, .delete-blog{
-    display: none;
-    
-  }
-  form{
-    width: 30%;
-    padding: 2rem;
-  }
-  input{
-    width: 100%;
-    padding: 0.2rem;
-  }
-  .bb{
-    padding: 1rem 0rem;
-  }
   .buttonn{
     display: flex;
     justify-content: center;
