@@ -36,6 +36,12 @@ function Blogs(){
 
         alert("New blog successfuly posted")
 
+
+               document.querySelector("#heading").value="";
+               document.querySelector("#blogname").value="";
+               document.querySelector("#decription").value="";
+               document.querySelector("#image").value=""
+
     }
 }
 

@@ -35,5 +35,10 @@ function Contactme(){
         messages.push(contactus)
         localStorage.setItem("messages",JSON.stringify(messages))
         ansewr.innerHTML='message success fuly sent'
+
+           document.querySelector("#names").value="";
+           document.querySelector("#email").value="";
+           document.querySelector("#phone").value="";
+           document.querySelector("#message").value=""
     }   
 }

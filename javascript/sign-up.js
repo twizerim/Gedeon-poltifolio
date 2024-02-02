@@ -58,6 +58,13 @@ signupForm.addEventListener("submit",function(e){
             users.push(person)
             localStorage.setItem("registeredUsers",JSON.stringify(users))
             alert("user successfuly ")
+
+            document.querySelector("#firstname").value="";
+            document.querySelector("#lastname").value="";
+            document.querySelector("#email").value="";
+            document.querySelector("#phone").value="";
+            document.querySelector("#password").value="";
+            document.querySelector("#confrimpassword").value=""
        }
 
          

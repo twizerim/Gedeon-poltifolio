@@ -29,6 +29,9 @@ function Login(){
       }else{
          alert("Thanks continue to go on onathe page")
          window.location.href="./admin.html"
+
+             document.querySelector("#email").value="";
+             document.querySelector("#password").value=""
       }
      }   
 }
