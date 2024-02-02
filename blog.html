@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <link rel="stylesheet" href="./css/blog.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/regular.min.css"
+        />
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css"
+        />
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+        />
+        <link rel="stylesheet" href="./css/admin.css">
+</head>
+<body>
+
+    <div class="blog-container">
+          <div class="form">
+              <form action="" id="blogForm">
+                 <a href="./admin.html"><i class="fa-sharp fa-solid fa-delete-left"></i></a>
+                 <h1>Posting New Blogs</h1>
+                    <label for="heading">Blog Title:
+                        <input type="text" id="heading" name="heading" required>
+                        <span id="headerror" class="error"></span>
+                    </label>
+
+
+                    <label for="blogname">Blog Name:
+                        <input type="text" id="blogname" name="blogname" required>
+                        <span id="blognameerr" class="error"></span>
+                    </label>
+
+
+                    <label for="decription">Blog Discription:
+                        <textarea name="decription" id="decription" cols="" rows="5" required></textarea>
+                        <span id="deserror" class="error"></span>
+                    </label>
+
+
+                    <label for="image">Blog Image:
+                        <input type="text" id="image" name="image" required>
+                        <span id="imagerror" class="error"></span>
+                    </label>
+                     <div class="button">
+                         <button type="submit" onclick="Blogs()">Post</button>
+                     </div>
+              </form>
+          </div>
+    </div>
+    <script src="./javascript/postblog.js"></script>
+</body>
+</html>

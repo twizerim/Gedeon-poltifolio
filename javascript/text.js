@@ -60,3 +60,13 @@ function Delete(){
 function byajeto(){
     const buto=document.querySelector(".user-update").style.display="block"
 }
+
+function table(){
+    const users=document.querySelector(".getAll").style.display="block"
+    const messge=document.querySelector(".message").style.display="none"
+}
+
+function contact(){
+    const messge=document.querySelector(".message").style.display="block"
+    const users=document.querySelector(".getAll").style.display="none"
+}
