@@ -4,8 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Single blog</title>
+    <link rel="stylesheet" href="./css/single.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/regular.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+    />
 </head>
 <body>
-    
+
+    <div class="single-blogn">
+        <div class="display">
+            <div class="picture">
+                <img src="./css/Images/corde.png" alt="">
+                <div class="favolite">
+                    <li > <i class="fa-solid fa-thumbs-up"></i>50</li>
+                    <li> <i class="fa-solid fa-thumbs-down"></i>51</li>
+                    <li onclick="postcomment()"><i class="fa-solid fa-comment"></i>70</li>
+                 </div>
+            </div>
+
+                <div class="discritpion">
+                    <h2>Blog title:object.heading</h2>
+                    <h3>Blog name: object.blogname</h3>
+                    <p>Certainly! Could you please provide more details or specify what you would like a 
+                        description of? Are you looking for a description of a specific topic,
+                     concept, or something else? Let me know so I can assist you better!</p>
+                     <span>The tech industry evolves rapidly, so staying informed is crucial. Follow blogs, subscribe to 
+                        newsletters, and engage with the coding community to keep up with the latest trends and technologies.
+                        Remember that learning to code is a continuous process, and there's always more to discover 
+                        and explore. Patience, persistence, and a curious mindset will serve you well on your coding journey.
+                        Learn the basics of Git, a version control system widely used in the software development industry. 
+                        Platforms like GitHub and GitLab allow you to host your code and collaborate with others.
+                    </span>
+                     
+                </div>
+        </div>
+        <div class="person-comment">
+            <div class="create-comment">
+                <form action="">
+                    <label for="names">Name
+                        <input type="text" name="names">
+                    </label>
+                    <label for="comment">Write comment
+                        <textarea name="" id="" cols="" rows="5" ></textarea>
+                        <i class="fa-solid fa-share"></i>
+                    </label>
+                </form>
+            </div>
+            <div class="comment-all">
+                <div class="comment-container">
+                    <div class="comment">
+                        <h1>5/2/2024</h1>
+                        <h2>Name<span>Gakwerere yvan</span></h2>
+                        <p>Rwose twabyishimiye ubwo mwatugezagaho inkuru zishimishije biratunezeza</p>
+                    </div>
+                    <div class="comment">+
+                        <h1>5/2/2024</h1>
+                        <h2>Name<span>Gakwerere yvan</span></h2>
+                        <p>Rwose twabyishimiye ubwo mwatugezagaho inkuru zishimishije biratunezeza</p>
+                    </div>
+                    <div class="comment">
+                        <h1>5/2/2024</h1>
+                        <h2>Name<span>Gakwerere yvan</span></h2>
+                        <p>Rwose twabyishimiye ubwo mwatugezagaho inkuru zishimishije biratunezeza</p>
+                    </div>
+                    
+                </div>
+            </div>  
+
+        </div>
+            
+    </div>
+    <script>
+        function postcomment(){
+            const comment=document.querySelector("form").style.display="block"
+            const three=document.querySelector(".comment-all").style.display="none"
+        }
+    </script>
 </body>
 </html>

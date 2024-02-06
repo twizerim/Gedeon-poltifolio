@@ -10,38 +10,64 @@ form.addEventListener("submit", (e)=>{
 
 function Blogs(){
     
-    let  Title=document.querySelector("#heading").value;
+    let  heading=document.querySelector("#heading").value;
     let  blogname=document.querySelector("#blogname").value;
-    let  blogdescription=document.querySelector("#decription").value;
-    let image=document.querySelector("#image").value;
+    let  decription=document.querySelector("#decription").value;
+    let uploadImage=document.querySelector("#image")
 
-    if(Title.length===0){
+    if(heading.length===0){
          const headerror=document.querySelector("#headerror");
          headerror.innerHTML="Please enter blog title"
     }else if(blogname.length===0){
         const blognameerr=document.querySelector("#blognameerr")
         blognameerr.innerHTML="Please enter blog name"
-    }else if(blogdescription.length===0){
+    }else if(decription.length===0){
         const  deserror=document.querySelector("#deserror");
          deserror.innerHTML="Please blog description"
-    }else if(image.length===0){
-        const imagerror=document.querySelector("#imagerror")
-        imagerror.innerHTML="Please enter blog image"
     }else{
-        const object={Title:heading,blogname:blogname,blogdescription:decription,image:image}
-         
-        const postblog=JSON.parse(localStorage.getItem("postblog")) || []
-        postblog.push(object)
-        localStorage.setItem("postblog",JSON.stringify(postblog))
+        const object = { heading: heading, blogname: blogname, decription: decription };
 
-        alert("New blog successfuly posted")
+        // Handle image file
+        const reader = new FileReader();
+        reader.addEventListener("load", () => {
+            localStorage.setItem("recent-image", reader.result);
+        });
+        reader.readAsDataURL(uploadImage.files[0]);
 
+        // Handle other form data
+        const postblog = JSON.parse(localStorage.getItem("postblog")) || [];
+        postblog.push(object);
+        localStorage.setItem("postblog", JSON.stringify(postblog));
 
-               document.querySelector("#heading").value="";
-               document.querySelector("#blogname").value="";
-               document.querySelector("#decription").value="";
-               document.querySelector("#image").value=""
+        alert("New blog successfully posted");
+
+        document.querySelector("#heading").value = "";
+        document.querySelector("#blogname").value = "";
+        document.querySelector("#decription").value = "";
 
     }
+    
+    
+    
+    
+    
+    
+    
+    // else{
+    //     const object={heading:heading,blogname:blogname,decription:decription,image:image}
+         
+    //     const postblog=JSON.parse(localStorage.getItem("postblog")) || []
+    //     postblog.push(object)
+    //     localStorage.setItem("postblog",JSON.stringify(postblog))
+
+    //     alert("New blog successfuly posted")
+
+
+    //            document.querySelector("#heading").value="";
+    //            document.querySelector("#blogname").value="";
+    //            document.querySelector("#decription").value="";
+    //            document.querySelector("#image").files=""
+
+    // }
 }
 

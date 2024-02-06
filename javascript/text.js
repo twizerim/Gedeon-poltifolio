@@ -70,3 +70,4 @@ function contact(){
     const messge=document.querySelector(".message").style.display="block"
     const users=document.querySelector(".getAll").style.display="none"
 }
+

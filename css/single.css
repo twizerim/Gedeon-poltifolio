@@ -1,0 +1,104 @@
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.single-blogn{
+    background-image: linear-gradient(to bottom, rgb(10, 132, 247),aliceblue,rgb(3, 91, 173));
+    padding: 4rem 3rem;
+    height: auto;
+}
+.display{
+    display: flex;
+   
+}
+.discritpion{
+    background-color: aliceblue;
+    padding: 3rem ;
+}
+h2{
+    font-size: 2.4rem;
+}
+h3{
+    font-size: 1.8rem;
+    padding: 2rem 0rem;
+}
+p{
+    font-size: 1.5rem;
+    padding-bottom: 3rem;
+}
+span{
+   margin-top: 2rem;
+    font-size: 1.5rem;
+}
+.favolite{
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    background-color: rgb(43, 41, 41);
+}
+li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    color: aliceblue;
+    font-size: 2rem;
+}
+i{
+    font-size: 3rem;
+    color: aliceblue;
+}
+.person-comment{
+    display: flex;
+    justify-content: center;
+}
+.comment-all{
+    margin-top: 2rem;
+    width: 50%;
+    background-color: rgb(18, 122, 212);
+    border-radius: 1.3rem;
+    padding: 2rem;
+   
+}
+.comment-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+.comment{
+    background-color: #ddd;
+    padding: 1rem;
+    border-radius: 0.3rem;
+}
+form{
+   
+    margin: 4rem;
+    display: none;
+}
+form label input {
+    width: 100%;
+}
+textarea{
+    width: 100%;
+}
+form label{
+    font-size: 2rem;
+    position: relative;
+}
+form label i{
+    position: absolute;
+    top: 60%;
+    left: 92%;
+    color: black;
+}
+
+
+

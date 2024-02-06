@@ -13,22 +13,27 @@ document.addEventListener('DOMContentLoaded', function () {
                  
             <div class="carder">
             <div class="picture">
-               <img src="${object.image}" alt="irahari">
+               <img id="imageprevie" src="" alt="irahari">
             </div>
             <div class="decription">
                 <h2>Blog title:${object.heading}</h2>
                  <h3>Blog name: ${object.blogname}</h3>
                  <p>${object.decription}</p>
-                 <span><a href="">Lead more........</a></span>
+                 <span><a href="#">Lead more........</a></span>
                   <div class="favolite">
-                     <li> <i class="fa-solid fa-thumbs-up"></i><p>50</p></li>
-                     <li> <i class="fa-solid fa-thumbs-down"></i><p>1</p></li>
-                     <li><i class="fa-solid fa-comment"></i><p>70</p></li>
+                     <li> <i class="fa-solid fa-thumbs-up"></i>50</li>
+                     <li> <i class="fa-solid fa-thumbs-down"></i>1</li>
+                     <li><i class="fa-solid fa-comment"></i>70</li>
                   </div>
             </div>
             `;
             blogcontainner.appendChild(blogElement);
         });
+
+        const imagefroData=localStorage.getItem("recent-image");
+        if(imagefroData){
+            document.querySelector("#imageprevie").setAttribute("src",imagefroData)
+        }
     }
 
 });

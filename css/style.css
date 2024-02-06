@@ -412,6 +412,7 @@ border-radius: 50%;
     background-color: #272626;
     height: auto;
     padding: 3rem 2rem;
+    position: relative;
  }
  .link-blogs{
     padding: 1rem;
@@ -562,5 +563,28 @@ button:hover{
     background-color: #af1288;
     color: #eee;
 }
+
+
+.login-blog{
+    position: absolute;
+    width: 20%;
+    top: 50%;
+    left: 50%;
+    background-color: #111111;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: none;
+
+}
+h1{
+    color: #fdfbfb;
+}
+.part{
+    padding: 2rem 0rem;
+}
+input{
+    padding: 0.4rem;
+}
+
 
   
