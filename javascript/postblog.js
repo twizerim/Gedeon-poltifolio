@@ -46,28 +46,5 @@ function Blogs(){
         document.querySelector("#decription").value = "";
 
     }
-    
-    
-    
-    
-    
-    
-    
-    // else{
-    //     const object={heading:heading,blogname:blogname,decription:decription,image:image}
-         
-    //     const postblog=JSON.parse(localStorage.getItem("postblog")) || []
-    //     postblog.push(object)
-    //     localStorage.setItem("postblog",JSON.stringify(postblog))
-
-    //     alert("New blog successfuly posted")
-
-
-    //            document.querySelector("#heading").value="";
-    //            document.querySelector("#blogname").value="";
-    //            document.querySelector("#decription").value="";
-    //            document.querySelector("#image").files=""
-
-    // }
 }
 

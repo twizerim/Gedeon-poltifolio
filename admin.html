@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Admin dashboard</title>
+        <link rel="stylesheet" href="./css/dependemce.css">
         <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -32,7 +33,7 @@
                 </div>
                 <div class="links">
                     <li><a href="#" onclick="contact()">Messgage</a></li>
-                    <li><a href="./blog.html">Blogs</a></li>
+                    <li><a href="#" onclick="blogs()">Blogs</a></li>
                     <li><a href="">Comment</a></li>
                     <li><a href="#" onclick="table()">Users</a></li>
                     <li><a href="">Notification</a></li>
@@ -100,12 +101,26 @@
                         </div>
                     </form>
                </div>
-                </div>
+               <div class="display-bloges">
+                  <a class="add-bloa" href="./blog.html">Add blog</a>
+                   <table class="Blogtable">
+                      <tr>
+                        <th>Id</th>
+                        <th>Blog Title</th>
+                        <th>Blog Name</th>
+                        <th colspan="2">Action</th>
+                      </tr>
+                      <tr></tr>
+                   </table>
+               </div>
+            </div>
                 
             </div>
         </div>
         <script src="./javascript/text.js"></script>
         <script src="./javascript/displaymessage.js"></script>
         <script src="./javascript/displayuser.js"></script>
+        <script src="./javascript/displindashblog.js"></script>
+        <script src="./javascript/Deleteblogs.js"></script>
     </body>
     </html>

@@ -1,0 +1,31 @@
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.display-bloges{
+   
+    padding-top: 3rem;
+    margin: 2rem; 
+    display: none; 
+}
+.display-bloges table{
+    width: 60%;
+    background-color: #ddd;
+}
+.add-bloa{
+    text-decoration: none;
+    font-size: 2rem;
+    color: white;
+    padding: 1rem 2rem;
+    background-color: blueviolet;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: right;
+    margin-bottom: 1rem;
+}
+.add-bloa:hover{
+    background-color: rgb(223, 11, 187);
+}

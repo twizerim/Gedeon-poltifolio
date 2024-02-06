@@ -64,10 +64,17 @@ function byajeto(){
 function table(){
     const users=document.querySelector(".getAll").style.display="block"
     const messge=document.querySelector(".message").style.display="none"
+    const blog=document.querySelector(".display-bloges").style.display="none"
 }
 
 function contact(){
     const messge=document.querySelector(".message").style.display="block"
+    const users=document.querySelector(".getAll").style.display="none"
+    const blog=document.querySelector(".display-bloges").style.display="none"
+}
+function blogs(){
+    const blog=document.querySelector(".display-bloges").style.display="block"
+    const messge=document.querySelector(".message").style.display="none"
     const users=document.querySelector(".getAll").style.display="none"
 }
 

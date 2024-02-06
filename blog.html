@@ -26,8 +26,12 @@
 <body>
 
     <div class="blog-container">
-          <div class="form">
-              <form action="" id="blogForm">
+         <div class="buttonm">
+            <button onclick="opinion()">Post blog</button>
+            <button onclick="option()">Update</button>
+         </div>
+          <div class="form" >
+              <form action="" id="blogForm" class="post">
                  <a href="./admin.html"><i class="fa-sharp fa-solid fa-delete-left"></i></a>
                  <h1>Posting New Blogs</h1>
                     <label for="heading">Blog Title:
@@ -57,7 +61,50 @@
                      </div>
               </form>
           </div>
+          <div class="form" >
+              <form action="" id="blogForm" class="Update">
+                <a href="./admin.html"><i class="fa-sharp fa-solid fa-delete-left"></i></a>
+                <h1>Update Blogs</h1>
+                   <label for="heading">Blog Title:
+                       <input type="text" id="heading" name="heading" required>
+                       <span id="headerror" class="error"></span>
+                   </label>
+
+
+                   <label for="blogname">Blog Name:
+                       <input type="text" id="blogname" name="blogname" required>
+                       <span id="blognameerr" class="error"></span>
+                   </label>
+
+
+                   <label for="decription">Blog Discription:
+                       <textarea name="decription" id="decription" cols="" rows="5" required></textarea>
+                       <span id="deserror" class="error"></span>
+                   </label>
+
+
+                   <label for="image">Blog Image:
+                       <input type="file" id="image" name="image" required>
+                       <span id="imagerror" class="error"></span>
+                   </label>
+                    <div class="button">
+                        <button type="submit" onclick="Blogs()">Update</button>
+                    </div>
+             </form>
+              
+          </div>
     </div>
     <script src="./javascript/postblog.js"></script>
+    <script>
+        function opinion(){
+            const post=document.querySelector(".post").style.display="block"
+            const update=document.querySelector(".Update").style.display="none"
+
+        }
+        function option(){
+            const post=document.querySelector(".post").style.display="none"
+            const update=document.querySelector(".Update").style.display="block"
+        }
+    </script>
 </body>
 </html>
