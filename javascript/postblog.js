@@ -26,7 +26,7 @@ function Blogs(){
          deserror.innerHTML="Please blog description"
     }else{
         const object = { heading: heading, blogname: blogname, decription: decription };
-
+         const blogId=new Date().getTime()
         // Handle image file
         const reader = new FileReader();
         reader.addEventListener("load", () => {
@@ -36,7 +36,7 @@ function Blogs(){
 
         // Handle other form data
         const postblog = JSON.parse(localStorage.getItem("postblog")) || [];
-        postblog.push(object);
+        postblog.push(object,blogId);
         localStorage.setItem("postblog", JSON.stringify(postblog));
 
         alert("New blog successfully posted");

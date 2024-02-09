@@ -14,17 +14,23 @@ function Contactme(){
     let phone=document.querySelector("#phone").value;
     let message=document.querySelector("#message").value
     const ansewr=document.querySelector(".solution");
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+     
 
     if(names.length===0){
-        alert("provide your names correctly")
-    }else if(!emailRegex.test(email)){
-        alert("invalid email")
-    }else if(phone.length!==10){
-        alert("collect your phene number")
-    }else if(message.length===0){
-        alert("Please type your message")
-    }else{
+        const namerror=document.querySelector("#nameError")
+         namerror.innerHTML="please write your firstname"
+     }else if(email.length===0){
+               const emailerror=document.querySelector("#emailerror")
+               const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if(!emailRegex.test(email)){
+                     emailerror.innerHTML="Invalid email"
+                }
+                
+     }else if(phone.length!==10){
+         const phonerror=document.querySelector("#phonerror")
+           phonerror.innerHTML='please write your phone number collectly'
+    
+}else{
         const messages=JSON.parse(localStorage.getItem("messages"))||[]
         const contactus={
             names:names,

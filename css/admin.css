@@ -275,4 +275,126 @@ table {
    border-radius: 0.3rem;
    padding: 0.2rem;
 }
+
+/* --------------------------------------------delete--------------------------------------------------- */
+
+
+.display-bloges {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  background-color: #ffffff;
+  height: 100vh;
+  font-family: sans-serif;
+  
+}
+
+.app {
+  width: 60%;
+  
+}
+
+@media (max-width:768px) {
+  .app {
+    width: 90%;
+  }                    
+}
+
+.app h1 {
+  color: white;
+  font-size: 30px;
+  padding: 10px 0;
+  text-align: center;
+  border-radius: .5rem .5rem 0 0;
+  background-color: #3b3a3a;
+  font-family: "Rajdhani", sans-serif;
+}
+
+.app .form {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  width: 100%;
+  background-color:#3c4979;
+}
+
+.app .form p {
+  border: none;
+  background-color: #3c4979;
+  font-size: 18px;
+  color: white;
+  padding: 10px;
+  /* width: 90%; */
+}
+
+.app .form button {
+  border: none;
+  color: white;
+  background-color: #1dd2af;
+  font-size: 25px;
+  font-weight: 600;
+  height: 42px;
+  width: 10%;
+}
+.app .form button a{
+  text-decoration: none;
+}
+
+
+.check {
+  width: 0.8em;
+  height: 0.8em;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid rgb(255, 255, 255);
+  -webkit-appearance: none;
+}
+
+.check:checked {
+  background-color: #1dd2af;
+}
+
+.task {
+  font-size: 18px;
+  padding-right: 20px;
+  width: fit-content;
+  background: transparent;
+  border: none;
+  color: #fff;
+  width: 500px;
+}
+
+.task:focus {
+  outline: none;
+}
+.blogdisp{
+  padding: 10px;
+  background-color: #262e4c;
+  border-bottom: 1px solid #3a4674;
+  width: 805px;
+  display: flex;
+  justify-content: space-between;
+}
+.group{
+  display: flex;
+  gap: 1rem;
+}
+
+.blogdisp i {
+  float: right;
+  cursor: pointer;
+  color: rgb(255, 82, 82);
+}
+
+.blogdisp i:hover {
+  color: red;
+}
+
+.completed {
+  color: rgba(192, 192, 192, 0.8);
+  text-decoration: line-through;
+}
+
   

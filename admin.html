@@ -102,16 +102,23 @@
                     </form>
                </div>
                <div class="display-bloges">
-                  <a class="add-bloa" href="./blog.html">Add blog</a>
-                   <table class="Blogtable">
-                      <tr>
-                        <th>Id</th>
-                        <th>Blog Title</th>
-                        <th>Blog Name</th>
-                        <th colspan="2">Action</th>
-                      </tr>
-                      <tr></tr>
-                   </table>
+                <div class="app">
+                    <h1>List of blogs posted</h1>
+                    <div class="form">
+                        <p>Add new blog....</p>
+                        <button><a href="./blog.html">Edit</a></button>
+                      <button><a href="./blog.html">&plus;</a></button>
+                    </div>
+                    <ul>
+                      <!-- <li class="blogdisp">
+                        <div class="group">
+                            <input type="checkbox" onclick="taskComplete(this)" class="check">
+                            <input type="text" value="Exercise" class="task" onfocus="getCurrentTask(this)" onblur="editTask(this)">
+                        </div>
+                        <i class="fa fa-trash" onclick="removeTask(this)"></i>
+                      </li>
+                    </ul> -->
+                </div>
                </div>
             </div>
                 
@@ -121,6 +128,5 @@
         <script src="./javascript/displaymessage.js"></script>
         <script src="./javascript/displayuser.js"></script>
         <script src="./javascript/displindashblog.js"></script>
-        <script src="./javascript/Deleteblogs.js"></script>
     </body>
     </html>
