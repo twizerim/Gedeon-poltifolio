@@ -414,6 +414,29 @@ border-radius: 50%;
     padding: 3rem 2rem;
     position: relative;
  }
+
+ .spinner{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: solid rgb(36, 35, 35);
+    border-radius: 50%;
+    border-top: 4px solid rgb(250, 248, 248);
+    top: 50%;
+    left: 50%;
+    animation: spin 1s linear infinite;
+    transform: translate(-50%, -50%);
+    /* display: none; */
+  }
+  
+  @keyframes spin{
+    0%{
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100%{
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
  .link-blogs{
     padding: 1rem;
     display: flex;

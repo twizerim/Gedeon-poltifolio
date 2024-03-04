@@ -13,10 +13,12 @@ document.addEventListener('DOMContentLoaded', function () {
                  
             <li class="blogdisp">
                         <div class="group">
-                            <input type="checkbox" onclick="taskComplete(this)" class="check">
-                            <input type="text" value="${object.heading}" class="task" onfocus="getCurrentTask(this)" onblur="editTask(this)">
+                           <input type="checkbox" onclick="taskComplete(this)" class="check" ${object.completed ? 'checked' : ''}>
+                <input type="text" value="${object.heading}" class="task ${object.completed ? 'completed' : ''}" onfocus="getCurrentTask(this)" onblur="editTask(this)">
                         </div>
-                        <i class="fa fa-trash" onclick="removeTask(this)"></i>
+                         <div class="iconss">
+                         <i class="fa fa-trash" onclick="removeTask(this)"></i>
+                         </div>
                       </li>
                     </ul>
             `;
@@ -42,10 +44,12 @@ function loadTasks(){
               <li>
                 <div class="group">
                 <input type="checkbox" onclick="taskComplete(this)" class="check" ${object.completed ? 'checked' : ''}>
-                <input type="text" value="${object.object}" class="task ${object.completed ? 'completed' : ''}" onfocus="getCurrentTask(this)" onblur="editTask(this)">
+                <input type="text" value="${object.heading}" class="task ${object.completed ? 'completed' : ''}" onfocus="getCurrentTask(this)" onblur="editTask(this)">
                 </div>
 
-             <i class="fa fa-trash" onclick="removeTask(this)"></i>
+                <div class="iconss">
+                <i class="fa fa-trash" onclick="removeTask(this)"></i>
+                </div>
               </li>
         `;
           blogcontainner.insertBefore(blogElement, blogcontainner.children[0]);
@@ -79,4 +83,30 @@ function removeTask(event) {
     // get current task
     function getCurrentTask(event) {
       currentTask = event.value;
+    }
+
+    function editTask(event) {
+      let postblog = Array.from(JSON.parse(localStorage.getItem("postblog")));
+      // check if task is empty
+      if (event.value === "") {
+        alert("Task is empty!");
+        event.value = currentTask;
+        return;
+      }
+      // task already exist
+      postblog.forEach(object => {
+        if (object.object === event.value) {
+          alert("Task already exist!");
+          event.value = currentTask;
+          return;
+        }
+      });
+      // update task
+      postblog.forEach(object => {
+        if (object.object === currentTask) {
+          object.object = event.value;
+        }
+      });
+      // update local storage
+      localStorage.setItem("postblog", JSON.stringify(postblog));
     }
