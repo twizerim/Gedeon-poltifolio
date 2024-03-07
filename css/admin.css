@@ -319,6 +319,29 @@ table {
   background-color:#3c4979;
 }
 
+.spinner{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: solid rgb(36, 35, 35);
+  border-radius: 50%;
+  border-top: 4px solid rgb(250, 248, 248);
+  top: 50%;
+  left: 50%;
+  animation: spin 1s linear infinite;
+  transform: translate(-50%, -50%);
+  /* display: none; */
+}
+
+@keyframes spin{
+  0%{
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100%{
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
 .app .form p {
   border: none;
   background-color: #3c4979;

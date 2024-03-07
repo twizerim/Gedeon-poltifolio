@@ -42,7 +42,6 @@
 const blogcontainner = document.querySelector(".card-blogs");
 const spinner = document.querySelector(".spinner");
 spinner.style.display = "block";
-blogcontainner.style.display = "none";
 
 const API="https://type-bn-poltifolio.onrender.com/Jant/blogs/get"
 
@@ -51,20 +50,20 @@ fetch(API)
     return resp.json()
 })
 .then((object)=>{
-    object.map((data)=>{
+    object.datas.map((data)=>{
         spinner.style.display = "none";
         blogcontainner.style.display = "block";
        
-        newsIndex.innerHTML +=`
+        blogcontainner.innerHTML +=`
 
         <div class="carder">
                      <div class="picture">
-                       <img id="imageprevie" src="" alt="irahari">
+                       <img id="imageprevie" src="${data.blogImage}" alt="irahari">
                     </div>
                      <div class="decription">
-                         <h2>Blog title:${data.heading}</h2>
-                          <h3>Blog name: ${data.blogname}</h3>
-                          <p>${data.decription}</p>
+                         <h2>Blog title:${data.blogTitle}</h2>
+                          <h3>Blog name: ${data.blogName}</h3>
+                          <p>${data.blogDescription}</p>
                           <span><a href="#">Lead more........</a></span>
                           <div class="favolite">
                              <li> <i class="fa-solid fa-thumbs-up"></i>50</li>

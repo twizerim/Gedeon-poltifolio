@@ -33,6 +33,16 @@ form{
     padding: 2rem;
     border-radius: 0.6rem;
 }
+@media(max-width:717px){
+    form{
+        width: 60%;
+    }
+}
+@media(max-width:171px){
+    .blog-container{
+        height: auto;
+    }
+}
 label{
     padding: 2rem 0rem;
     font-size: 1.5rem;
@@ -62,6 +72,7 @@ button:hover{
     background-color: rgb(238, 9, 219);
     color: azure;
 }
+
 
 .post{
     display: none; 

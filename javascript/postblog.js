@@ -74,8 +74,8 @@ form.addEventListener("submit", (e) => {
     .then((data)=>{
        alert(data.message)
     })
-    .catch((errror)=>{
-      alert(errror)
+    .catch((error)=>{
+      console.log(error)
     })
   
  });
