@@ -500,8 +500,11 @@ span a{
     align-items: center;
     gap: 1rem;
 }
+.favolite a{
+    text-decoration: none;
+}
 i{
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 /* ---------------------------------------------------------------------------------- */
 .contact-contain{

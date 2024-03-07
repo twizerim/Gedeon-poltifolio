@@ -64,11 +64,11 @@ fetch(API)
                          <h2>Blog title:${data.blogTitle}</h2>
                           <h3>Blog name: ${data.blogName}</h3>
                           <p>${data.blogDescription}</p>
-                          <span><a href="#">Lead more........</a></span>
+                          <span><a href="./singleBlog.html?id=${data._id}">Lead more........</a></span>
                           <div class="favolite">
-                             <li> <i class="fa-solid fa-thumbs-up"></i>50</li>
-                              <li> <i class="fa-solid fa-thumbs-down"></i>1</li>
-                              <li><i class="fa-solid fa-comment"></i>70</li>
+                          <a href="./singleBlog.html?id=${data._id}"><li> <i class="fa-solid fa-thumbs-up"></i>${data.likes.length}</li></a>
+                          <a href="./singleBlog.html?id=${data._id}"><li> <i class="fa-solid fa-thumbs-down"></i>${data.dislikes.length}</li></a>
+                          <a href="./singleBlog.html?id=${data._id}"><li><i class="fa-solid fa-comment"></i>${data.comments.length}</li></a>
                           </div>
                      </div>
             

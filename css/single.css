@@ -11,17 +11,75 @@ html{
 }
 
 .single-blogn{
-    background-image: linear-gradient(to bottom, rgb(10, 132, 247),aliceblue,rgb(3, 91, 173));
+    background-image: linear-gradient(to bottom, rgb(112, 130, 148),aliceblue,rgb(105, 156, 204));
     padding: 4rem 3rem;
-    height: auto;
+    height: 100vh;
 }
 .display{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
    
+}
+.view-comment{
+    padding: 2rem 0rem;
+}
+.view-comment span{
+    color: blue;
+}
+
+.headrs{
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+    align-items: center;
+    
+}
+.lo p{
+   font-size: 4rem;
+   color: #af1288; 
+   font-weight: bold;
+   margin-top: 2rem;
+
+}
+@media(max-width:888px){
+    ul{
+        gap: 1rem;
+    }
+    .headrs{
+        gap: 3rem;
+    }
+    ul li a{
+        font-size: 1.3rem;
+    }
+    .lo p{
+        font-size: 2.5rem;  
+    }
+}
+@media(max-width:600px){
+    ul li a{
+        display: none;
+    }
+    .headrs{
+        padding: 0rem 3rem;
+    }
+}
+ul{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+ul li a{
+    text-decoration: none;
 }
 .discritpion{
     background-color: aliceblue;
     padding: 3rem ;
+}
+.picture{
+    width: 40%;
 }
 h2{
     font-size: 2.4rem;
@@ -41,8 +99,9 @@ span{
 .favolite{
     display: flex;
     justify-content: space-around;
-    padding: 2rem;
-    background-color: rgb(43, 41, 41);
+    padding: 0.4rem 1rem;
+    background-color: rgb(77, 75, 75);
+    border-radius: 1rem;
 }
 li{
     list-style: none;
@@ -56,49 +115,7 @@ i{
     font-size: 3rem;
     color: aliceblue;
 }
-.person-comment{
-    display: flex;
-    justify-content: center;
-}
-.comment-all{
-    margin-top: 2rem;
-    width: 50%;
-    background-color: rgb(18, 122, 212);
-    border-radius: 1.3rem;
-    padding: 2rem;
-   
-}
-.comment-container{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 2rem;
-}
-.comment{
-    background-color: #ddd;
-    padding: 1rem;
-    border-radius: 0.3rem;
-}
-form{
-   
-    margin: 4rem;
-    display: none;
-}
-form label input {
-    width: 100%;
-}
-textarea{
-    width: 100%;
-}
-form label{
-    font-size: 2rem;
-    position: relative;
-}
-form label i{
-    position: absolute;
-    top: 60%;
-    left: 92%;
-    color: black;
-}
+
 
 
 

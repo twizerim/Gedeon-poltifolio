@@ -24,7 +24,7 @@
 //     }
 
 // });
-const token=window.localStorage.getItem("token")
+let token=window.localStorage.getItem("token")
 const Allmessage = document.querySelector(".message-cards")
 const spinner = document.querySelector(".spinner")
 Allmessage.style.display="none"
