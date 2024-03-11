@@ -26,76 +26,34 @@
 <body>
 
     <div class="blog-container">
-         <div class="buttonm">
-            <button onclick="opinion()">Post blog</button>
-            <button onclick="option()">Update</button>
-         </div>
-          <div class="form" >
-              <form action="" id="blogForm" class="post">
-                 <a href="./admin.html"><i class="fa-sharp fa-solid fa-delete-left"></i></a>
-                 <h1>Posting New Blogs</h1>
-                    <label for="heading">Blog Title:
-                        <input type="text" id="heading" name="heading" required>
-                        <span id="headerror" class="error"></span>
-                    </label>
-
-
-                    <label for="blogname">Blog Name:
-                        <input type="text" id="blogname" name="blogname" required>
-                        <span id="blognameerr" class="error"></span>
-                    </label>
-
-
-                    <label for="decription">Blog Discription:
-                        <textarea name="decription" id="decription" cols="" rows="5" required></textarea>
-                        <span id="deserror" class="error"></span>
-                    </label>
-
-
-                    <label for="image">Blog Image:
-                        <input type="file" id="image" name="image" required>
-                        <span id="imagerror" class="error"></span>
-                    </label>
-                     <div class="button">
-                         <button type="submit">Post</button>
-                     </div>
-              </form>
-          </div>
-          <div class="form" >
-              <form action="" id="blogForm" class="Update">
-                <a href="./admin.html"><i class="fa-sharp fa-solid fa-delete-left"></i></a>
-                <h1>Update Blogs</h1>
-                   <label for="heading">Blog Title:
-                       <input type="text" id="head" name="heading" required>
-                       <span id="headerror" class="error"></span>
-                   </label>
-
-
-                   <label for="blogname">Blog Name:
-                       <input type="text" id="blogn" name="blogname" required>
-                       <span id="blognameerr" class="error"></span>
-                   </label>
-
-
-                   <label for="decription">Blog Discription:
-                       <textarea name="decription" id="decrip" cols="" rows="5" required></textarea>
-                       <span id="deserror" class="error"></span>
-                   </label>
-
-
-                   <label for="image">Blog Image:
-                       <input type="file" id="imag" name="image" required>
-                       <span id="imagerror" class="error"></span>
-                   </label>
-                    <div class="button">
-                        <button type="submit" onclick="Blogs()">Update</button>
-                    </div>
-             </form>
-              
-          </div>
+              <h1>post new blog</h1>
+           <form action="">
+            <a href="./admin.html"><i class="fa-sharp fa-solid fa-delete-left"></i></a>
+              <div class="groupe">
+                <label for="title">Blog Title</label>
+                <input type="text" name="title" id="title">
+              </div>
+              <div class="groupe">
+                <label for="names"> Blog Name</label>
+                <input type="text" name="names" id="names">
+              </div>
+              <div class="groupe">
+                <label for="summary">Blog description</label>
+                <input type="text" name="summary" id="summary">
+              </div>
+              <div class="select">
+                <label for="image">Blog Image:
+                  <input type="file" id="image" name="image" required>
+              </label>
+              </div>
+              <div class="button">
+                <button type="submit">post</button>
+              </div>
+               
+           </form>
     </div>
     <script src="./javascript/postblog.js"></script>
-    <script>
+    <!-- <script>
         function opinion(){
             const post=document.querySelector(".post").style.display="block"
             const update=document.querySelector(".Update").style.display="none"
@@ -105,6 +63,6 @@
             const post=document.querySelector(".post").style.display="none"
             const update=document.querySelector(".Update").style.display="block"
         }
-    </script>
+    </script> -->
 </body>
 </html>

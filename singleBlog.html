@@ -62,15 +62,70 @@
                     </span>
                      
                 </div> -->
-        </div>    
+        </div>
+        <div class="spinner"></div>
+        <div class="comment-cotainner">
+             <div class="back" onclick="toback()"><i class="fa-sharp fa-solid fa-delete-left"></i></div>
+             <div class="comment-display">
+                <!-- <div class="comment">
+                    <h1>23/5/2025</h1>
+                    <h2>Ndagije peter</h2>
+                     <span>gytuyfhrujhoiujpjpjoihuyftrdtrdfyh</span>
+                </div> -->
+             </div>
+             <div class="comment-post">
+                 <form action="" class="commentForm">
+                    <h1>Add your comment</h1>
+                      <div class="groupe">
+                        <label for="names">
+                            <input type="text" name="names" id="names" placeholder="Your names">
+                        </label>
+                      </div>
+                     <div class="groupe">
+                        <label for="message">
+                            <input type="text" name="message" id="message" placeholder="Your comment">
+                        </label>
+                     </div>
+                    <button type="submit">Send it now</button>
+                 </form>
+             </div>
+        </div>
     </div>
     <script>
-        function postcomment(){
-            const comment=document.querySelector("form").style.display="block"
-            const three=document.querySelector(".comment-all").style.display="none"
+        function comment(){
+            let viewcomment=document.querySelector(".comment-cotainner").style.display="block"
+        }
+        function toback(){
+            let viewcomment=document.querySelector(".comment-cotainner").style.display="none"
+        }
+        function putLikes(){
+            let idParams=window.location.href.split("?id=")[1]
+            let token=window.localStorage.getItem("token")
+            let postman={
+                headers:{
+                    "auth-token":token
+                }
+            }
+
+            fetch(`https://type-bn-poltifolio.onrender.com/Jant/blogs/like/${idParams}`, postman)
+    .then(resp => {
+        console.log("Response status:", resp.status);
+        return resp.json();
+    })
+    .then(data => {
+        console.log("Response data:", data);
+        alert(data.message);
+    })
+    .catch(error => {
+        console.error("Fetch error:", error);
+        alert(error);
+    });
+
+            
         }
     </script>
     <script src="./javascript/singleblog.js"></script>
     <script src="./javascript/like.js"></script>
+    <script src="./javascript/commentpost.js"></script>
 </body>
 </html>

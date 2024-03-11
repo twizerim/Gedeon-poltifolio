@@ -115,6 +115,86 @@ i{
     font-size: 3rem;
     color: aliceblue;
 }
+.back{
+    display: flex;
+    justify-content: right;
+    padding-bottom: 0.5rem;
+}
+.comment-cotainner{
+    background-color: rgba(44, 43, 43, 0.733);
+    padding: 2rem;
+    width: 25%;
+    border-radius: 6px;
+    position: absolute;
+    left: 72%;
+    top: 30%;
+    z-index: 9999;
+    display: none;
+}
+.comment-display{
+    display: flex;
+    flex-direction:column-reverse;
+    gap: 10px;
+}
+.comment{
+    background-color: #fff;
+    padding: 10px;
+    border-top-right-radius:6px ;
+    border-top-left-radius:6px ;
+}
+.comment h1{
+    text-align: right;
+    color: #af1288;
+}
+.comment h2{
+    padding: 10px 0px;
+    font-size: 1.7rem;
+}
+.comment-post{
+    padding: 2rem;
+}
+form .groupe{
+    margin-bottom: 10px;
+    border-bottom: 1px solid #fff;
+}
+.groupe label input{
+    width: 100%;
+    padding: 4px;
+    outline: none;
+    border: none;
+    background-color: rgba(44, 43, 43, 0.623);
+    color: #fff;
+}
+button{
+    background-color:  rgb(243, 239, 239);
+    font-size: 1.6rem;
+    color: #0e0d0d;
+    padding: 1px 6px;
+}
+
+
+.spinner{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: solid rgb(36, 35, 35);
+    border-radius: 50%;
+    border-top: 4px solid rgb(250, 248, 248);
+    top: 50%;
+    left: 50%;
+    animation: spin 1s linear infinite;
+    transform: translate(-50%, -50%);
+    /* display: none; */
+  }
+  
+  @keyframes spin{
+    0%{
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100%{
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
 
 
 

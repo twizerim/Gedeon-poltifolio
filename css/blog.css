@@ -9,6 +9,10 @@
     background-image: linear-gradient(to right,rgb(17, 17, 17),white);
     height: 100vh;
     padding: 4rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .error{
     color: brown;
@@ -71,14 +75,6 @@ button{
 button:hover{
     background-color: rgb(238, 9, 219);
     color: azure;
-}
-
-
-.post{
-    display: none; 
-}
-.Update{
-    display: none; 
 }
 
 .buttonm{

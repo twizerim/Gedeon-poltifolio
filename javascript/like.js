@@ -2,7 +2,7 @@
 let idParams=window.location.href.split("?id=")[1]
 let token=window.localStorage.getItem("token")
 
-const  putLikes=()=>{
+function putLikes(){
    alert("biraza gukunda")
 
 }

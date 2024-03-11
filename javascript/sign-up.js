@@ -110,6 +110,7 @@ signupForm.addEventListener("submit",function(e){
       })
       .then((data)=>{
           alert(data.message)
+          window.location.href="./login.html"
           let firstname=document.querySelector("#firstname").value="";
           let lastname=document.querySelector("#lastname").value="";
           let email =document.querySelector("#email").value="";

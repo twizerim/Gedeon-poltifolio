@@ -1,60 +1,57 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    const postblog = localStorage.getItem("postblog");
-    if (postblog) {
-        const blogArrary = JSON.parse(postblog);
-
-        const blogcontainner = document.querySelector(".display-bloges");
-
-        blogArrary.forEach(object => {
-
-            const blogElement = document.createElement("ul");
-            blogElement.innerHTML = `
-                 
-            <li class="blogdisp">
-                        <div class="group">
-                           <input type="checkbox" onclick="taskComplete(this)" class="check" ${object.completed ? 'checked' : ''}>
-                <input type="text" value="${object.heading}" class="task ${object.completed ? 'completed' : ''}" onfocus="getCurrentTask(this)" onblur="editTask(this)">
-                        </div>
-                         <div class="iconss">
-                         <i class="fa fa-trash" onclick="removeTask(this)"></i>
-                         </div>
-                      </li>
-                    </ul>
-            `;
-            blogcontainner.appendChild(blogElement);
-        });
+    const display = document.querySelector(".blog-ondash");  
+    const API="https://type-bn-poltifolio.onrender.com/Jant/blogs/get"
+     fetch(API)
+     .then(resp =>{
+         return resp.json()
+     })
+     .then(data =>{
+        data.datas.map(object => {
+          console.log(object)
+        display.innerHTML=`
+             <li>
+                <div class="group">
+                    <input type="text" value="${object.blogTitle}">
+                    <div class="iconss">
+                      <i class="fa fa-trash" onclick="removeTask(this)"></i>
+                      </div>
+              </li>
+        `
+     
+  });
+     })  
     }
 
-});
+);
 
-window.onload = loadTasks;
-function loadTasks(){
-    if (localStorage.getItem("postblog") == null) return;
+// window.onload = loadTasks;
+// function loadTasks(){
+//     if (localStorage.getItem("postblog") == null) return;
 
-      // Get the tasks from localStorage and convert it to an array
-      let postblog = Array.from(JSON.parse(localStorage.getItem("postblog")));
+//       // Get the tasks from localStorage and convert it to an array
+//       let postblog = Array.from(JSON.parse(localStorage.getItem("postblog")));
 
-      // Loop through the tasks and add them to the list
-      postblog.forEach(object => {
-        const blogcontainner = document.querySelector(".display-bloges");
-        const blogElement = document.createElement("ul");
-        blogElement.innerHTML = `
+//       // Loop through the tasks and add them to the list
+//       postblog.forEach(object => {
+//         const blogcontainner = document.querySelector(".display-bloges");
+//         const blogElement = document.createElement("ul");
+//         blogElement.innerHTML = `
             
-              <li>
-                <div class="group">
-                <input type="checkbox" onclick="taskComplete(this)" class="check" ${object.completed ? 'checked' : ''}>
-                <input type="text" value="${object.heading}" class="task ${object.completed ? 'completed' : ''}" onfocus="getCurrentTask(this)" onblur="editTask(this)">
-                </div>
+//               <li>
+//                 <div class="group">
+//                 <input type="checkbox" onclick="taskComplete(this)" class="check" ${object.completed ? 'checked' : ''}>
+//                 <input type="text" value="${object.heading}" class="task ${object.completed ? 'completed' : ''}" onfocus="getCurrentTask(this)" onblur="editTask(this)">
+//                 </div>
 
-                <div class="iconss">
-                <i class="fa fa-trash" onclick="removeTask(this)"></i>
-                </div>
-              </li>
-        `;
-          blogcontainner.insertBefore(blogElement, blogcontainner.children[0]);
-      });
-}
+//                 <div class="iconss">
+//                 <i class="fa fa-trash" onclick="removeTask(this)"></i>
+//                 </div>
+//               </li>
+//         `;
+//           blogcontainner.insertBefore(blogElement, blogcontainner.children[0]);
+//       });
+// }
 
 function taskComplete(event) {
     let postblog= Array.from(JSON.parse(localStorage.getItem("postblog")));

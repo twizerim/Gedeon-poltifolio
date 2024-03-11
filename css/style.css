@@ -27,14 +27,12 @@ nav{
     align-items: center;
 }
 .logo h1{
-    font-size: 3rem;
-}
-.logo h1 span{
-    font-size: 2rem;
+    font-size: 4rem;
 }
 .logo h1 span a{
     text-decoration: none;
     color: #FF00BF;
+    font-size: 3rem;
 }
 
 .links{
@@ -68,12 +66,15 @@ nav{
     
     padding: 3rem;
     height: 88vh;
+    background-image: linear-gradient(to bottom, rgb(112, 130, 148),aliceblue,rgb(105, 156, 204));
+    
 }
 .home{
     display: flex;
     align-items: center;
     justify-content: center;
     padding-top: 5rem;
+    
 }
 
 .image img{

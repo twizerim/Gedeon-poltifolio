@@ -36,8 +36,6 @@ fetch("https://type-bn-poltifolio.onrender.com/Jant/user/get")
   .then((response) => response.json())
   .then((data) => {
     data.datas.map((person, index) => {
-        console.log(person)
-
       users.innerHTML = `
         <tr>
         <td>${index + 1}</td>
@@ -50,8 +48,6 @@ fetch("https://type-bn-poltifolio.onrender.com/Jant/user/get")
         </tr>
       `;
     });
-
-    alert(data.message);
   })
   .catch((error) => {
     alert(error);
