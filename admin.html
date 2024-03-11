@@ -119,6 +119,33 @@
                     </ul>
                 </div>
                </div>
+               <div class="update-blog-form">
+                <p class="p"><i class="fa-sharp fa-solid fa-delete-left back" onclick="upfom()"></i></p>
+                    <h1>update blog</h1>
+                <form action="" class="">
+                      <div class="groupe">
+                        <label for="title">Blog Title</label>
+                        <input type="text" name="title" id="title">
+                      </div>
+                      <div class="groupe">
+                        <label for="names"> Blog Name</label>
+                        <input type="text" name="names" id="names">
+                      </div>
+                      <div class="groupe">
+                        <label for="summary">Blog description</label>
+                        <input type="text" name="summary" id="summary">
+                      </div>
+                      <div class="select">
+                        <label for="image">Blog Image:
+                          <input type="file" id="image" name="image" required>
+                      </label>
+                      </div>
+                      <div class="button">
+                        <button type="submit">post</button>
+                      </div>
+                       
+                   </form>
+               </div>
             </div>
                 
             </div>
@@ -127,5 +154,10 @@
         <script src="./javascript/displaymessage.js"></script>
         <script src="./javascript/displayuser.js"></script>
         <script src="./javascript/displindashblog.js"></script>
+        <script>
+            function upfom(){
+               const formupd=document.querySelector(".update-blog-form").style.display="none"
+            }
+        </script>
     </body>
     </html>

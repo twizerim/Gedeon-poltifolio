@@ -404,15 +404,48 @@ table {
   display: flex;
   justify-content: space-between;
 }
-#edit{
+.other{
+  display: none;
+}
+.edit{
   color: green;
 }
-#delete{
+.delete{
   color: red;
 }
 .group{
   display: flex;
   gap: 2rem;
+}
+.update-blog-form{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-color: #262e4c;
+  width: 30%;
+  padding: 1.8rem;
+  display: none;
+}
+h1{
+  text-align: center;
+}
+.update-blog-form label{
+  color: #fff;
+}
+.update-blog-form form input{
+  width: 100%;
+  padding: 7px;
+}
+button{
+  padding: 0.4rem 4rem;
+}
+.p{
+  display: flex;
+  justify-content: right;
+}
+.back{
+  color: #fff;
+  font-size: 2rem;
 }
 
 

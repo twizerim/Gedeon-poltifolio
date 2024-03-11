@@ -8,22 +8,83 @@ document.addEventListener('DOMContentLoaded', function () {
      })
      .then(data =>{
         data.datas.map(object => {
-          console.log(object)
         display.innerHTML=`
              <div class ="contain-blogs">
              <li class="blogdisp">
+             
              <p>${object.blogTitle}</p>
+             <div class="other">
+             <h2>${object.blogName}</>
+             <span>${object.blogDescription}</span>
+             <img src="${object.blogImage}" alt="iraza">
+             </div>
              <div class="group">
-             <i class="fa-solid fa-pencil" id="edit"></i>
-             <i class="fa fa-trash" id="delete"></i>
+             <i class="fa-solid fa-pencil edit" id="${object._id}"></i>
+             <i class="fa fa-trash delete" id="${object._id}"></i>
              </div>
            </li>
              </div>
         `
      
-  });
-     })  
-    }
+      });
+      const updateselect=document.querySelector(".edit")
+      console.log(updateselect)
+      const updataform = document.querySelector(".update-blog-form")
+        updateselect.onclick=function(){
+          updataform.style.display="block"
+          let blogdisp = this.parentElement.parentElement;
+          let p = blogdisp.querySelector("p").innerText;
+          let other = blogdisp.querySelector(".other");
+          let h2 = other.querySelector("h2").innerText;
+          let span = other.querySelector("span").innerText;
+          let img = other.querySelector("img").getAttribute("src");
+          let id = updateselect.getAttribute("id");
+
+
+          const editTitle = updataform.querySelector('#title');
+          const editName = updataform.querySelector('#names');
+          const editDescription = updataform.querySelector('#summary');
+          const editImage = updataform.querySelector('#image')
+
+          editTitle.value = p;
+          editName.value = h2;
+          editDescription.value = span;
+          editImage.value = img;
+
+          updataform.addEventListener("submit",(e)=>{
+             e.preventDefault()
+            const updatedData = {
+              blogTitle: editTitle.value,
+              blogName: editName.value,
+              blogDescription: editDescription.value,
+              blogImage: editImage.value
+          };
+              console.log(updatedData)
+            //   const postman={
+            //     method:"PATCH", 
+            //     headers:{
+            //         "Content-Type": "application/json",
+            //         "auth-token":token
+            //     },
+            //     body: JSON.stringify(updatedData)
+            // }
+            // const api=`https://type-bn-poltifolio.onrender.com/Jant/blogs/update/${id}`
+            // fetch(api,postman)
+            // .then(resp =>{
+            //    return resp.json()
+            // })
+            // .then(data =>{
+            //    console(data)
+            // })
+            // .catch(error =>{
+            //    console(error)
+            // })
+          })
+
+      }
+  
+    })  
+ }
 
 );
 
