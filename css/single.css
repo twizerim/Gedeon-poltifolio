@@ -129,7 +129,7 @@ i{
     left: 72%;
     top: 30%;
     z-index: 9999;
-    display: none;
+    /* display: none; */
 }
 .comment-display{
     display: flex;

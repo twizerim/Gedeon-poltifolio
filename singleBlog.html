@@ -74,7 +74,7 @@
                 </div> -->
              </div>
              <div class="comment-post">
-                 <form action="" class="commentForm">
+                 <form action="" id="commentForm">
                     <h1>Add your comment</h1>
                       <div class="groupe">
                         <label for="names">
@@ -126,6 +126,37 @@
     </script>
     <script src="./javascript/singleblog.js"></script>
     <script src="./javascript/like.js"></script>
-    <script src="./javascript/commentpost.js"></script>
+    <script>
+        const form=document.querySelector("form")
+       
+        form.addEventListener("submit",function(e){
+            e.preventDefault()
+           
+           const idParams=window.location.href.split("?id=")[1]
+          let token=window.localStorage.getItem("token")
+          let names=document.querySelector("#names").value;
+          let message=document.querySelector("#message").value
+           const data={names,message}
+           const postman = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                "auth-token":token
+            },
+            body: JSON.stringify(data)
+        };
+        fetch(`https://type-bn-poltifolio.onrender.com/Jant/comment/${idParams}`,postman)
+        .then(resp =>{
+            return resp.json()
+        })
+        .then(data =>{
+            alert(data.message)
+        })
+        .catch(error =>{
+            console.log(error)
+            alert(error)
+        })
+    })
+    </script>
 </body>
 </html>

@@ -76,21 +76,29 @@ const processImage = (input) => {
             blogname,
             blogDescription
         };
-        const API="https://type-bn-poltifolio.onrender.com/Jant/blogs/post"
+        const API='https://type-bn-poltifolio.onrender.com/Jant/blogs/post'
         const postman = {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                "auth-token":token
             },
             body: JSON.stringify(blogs)
         };
-        const response = await fetch(API, postman);
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        const data = await response.json();
-        alert(data.message)
-    } catch (error) {
+        fetch(API,postman)
+        .then(resp =>{
+            return resp.json()
+        })
+        .then(data =>{
+            alert(data.message)
+        })
+    //     const response = await fetch(API, postman);
+    //     if (!response.ok) {
+    //         throw new Error('Network response was not ok');
+    //     }
+    //     const data = await response.json();
+    //     alert(data.message)
+     } catch (error) {
         alert(error)
     }
     
