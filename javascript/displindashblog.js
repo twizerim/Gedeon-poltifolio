@@ -10,13 +10,15 @@ document.addEventListener('DOMContentLoaded', function () {
         data.datas.map(object => {
           console.log(object)
         display.innerHTML=`
-             <li>
-                <div class="group">
-                    <input type="text" value="${object.blogTitle}">
-                    <div class="iconss">
-                      <i class="fa fa-trash" onclick="removeTask(this)"></i>
-                      </div>
-              </li>
+             <div class ="contain-blogs">
+             <li class="blogdisp">
+             <p>${object.blogTitle}</p>
+             <div class="group">
+             <i class="fa-solid fa-pencil" id="edit"></i>
+             <i class="fa fa-trash" id="delete"></i>
+             </div>
+           </li>
+             </div>
         `
      
   });

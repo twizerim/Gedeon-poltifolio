@@ -392,32 +392,31 @@ table {
 .task:focus {
   outline: none;
 }
+.contain-blogs{
+  display: flex;
+  flex-direction: column;
+}
 .blogdisp{
   padding: 10px;
   background-color: #262e4c;
   border-bottom: 1px solid #3a4674;
-  width: 805px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.group{
-  display: flex;
-  gap: 1rem;
+#edit{
+  color: green;
 }
-
-.blogdisp i {
-  float: right;
-  cursor: pointer;
-  color: rgb(255, 82, 82);
-}
-
-.blogdisp i:hover {
+#delete{
   color: red;
 }
-
-.completed {
-  color: rgba(192, 192, 192, 0.8);
-  text-decoration: line-through;
+.group{
+  display: flex;
+  gap: 2rem;
 }
+
+
+
+
 
   
