@@ -28,12 +28,12 @@
             <p>TW Gedeon</p>
         </div>
         <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">About-Me</a></li>
-            <li><a href="">Contact-Me</a></li>
-            <li><a href="">Poltifolio</a></li>
-            <li><a href="">Blogs</a></li>
-            <li><a href="">Login</a></li>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./index.html?id=about">About-Me</a></li>
+            <li><a href="./index.html?id=contact">Contact-Me</a></li>
+            <li><a href="./index.html?id=poltifolio">Poltifolio</a></li>
+            <li><a href="./index.html?id=blog">Blogs</a></li>
+            <li><a href="./login.html">Login</a></li>
         </ul>
     </div>
     <div class="single-blogn">
@@ -135,8 +135,8 @@
            const idParams=window.location.href.split("?id=")[1]
           let token=window.localStorage.getItem("token")
           let names=document.querySelector("#names").value;
-          let message=document.querySelector("#message").value
-           const data={names,message}
+          let comment=document.querySelector("#message").value
+           const data={names,comment}
            const postman = {
             method: 'POST',
             headers: {
